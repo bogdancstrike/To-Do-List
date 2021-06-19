@@ -1,16 +1,34 @@
 {
   "tasks": [
     {
-      "text": "task1",
-      "day": "task1",
-      "reminder": false,
+      "text": "Going to Gym",
+      "day": "21.06.2021",
+      "reminder": true,
       "id": 1
     },
     {
-      "text": "task3",
-      "day": "task3",
+      "text": "123",
+      "day": "123",
+      "reminder": true,
+      "id": 2
+    },
+    {
+      "text": "task1",
+      "day": "task1",
       "reminder": true,
       "id": 3
+    },
+    {
+      "text": "task2",
+      "day": "task2",
+      "reminder": false,
+      "id": 4
+    },
+    {
+      "text": "task1",
+      "day": "task1",
+      "reminder": true,
+      "id": 5
     }
   ]
 }

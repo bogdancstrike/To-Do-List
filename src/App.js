@@ -3,12 +3,14 @@ import Tasks from "./components/Tasks";
 import AddTask from "./components/AddTask";
 import Footer from "./components/Footer";
 import About from "./components/About";
+import DeleteAll from "./components/DeleteAll";
+
 import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 function App() {
   const [showAddTask, setShowAddTask] = useState(false);
-  const [tasks, setTasks] = useState([
+  var [tasks, setTasks] = useState([
     //useState e imutabil, deci pt orice modificare folosim setTasks
   ]);
   useEffect(() => {
@@ -61,6 +63,13 @@ function App() {
     setTasks(tasks.filter((task) => task.id !== id));
   };
 
+  //Delete Tasks
+  const deleteTasks = async () => {
+    await fetch(`http://localhost:8000/tasks/`, { method: "DELETE" });
+
+    setTasks((tasks = []));
+  };
+
   //Toggle Reminder
   const toggleReminder = async (id) => {
     const taskToToggle = await fetchTask(id);
@@ -109,6 +118,7 @@ function App() {
           )}
         />
         <Route path="/about" component={About} />
+        {tasks.length > 0 ? <DeleteAll onDeleteAll={deleteTasks} /> : ""}
         <Footer />
       </div>
     </Router>

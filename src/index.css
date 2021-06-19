@@ -110,3 +110,16 @@ footer {
   margin-top: 30px;
   text-align: center;
 }
+
+.deleteAllTasks {
+  margin-top: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.deleteAllTasksIcon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
