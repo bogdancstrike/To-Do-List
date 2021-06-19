@@ -8,7 +8,7 @@ You can then run the React dev server
 
 ### `npm start`
 
-## How To Use The App
+#### How To Use The App
 
 # Add An Action
 
