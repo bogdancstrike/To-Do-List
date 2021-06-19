@@ -65,8 +65,9 @@ function App() {
 
   //Delete Tasks
   const deleteTasks = async () => {
-    await fetch(`http://localhost:8000/tasks/`, { method: "DELETE" });
-
+    for (let id = 1; id <= tasks.length; id++) {
+      await fetch(`http://localhost:8000/tasks/${id}`, { method: "DELETE" });
+    }
     setTasks((tasks = []));
   };
 
