@@ -12,7 +12,7 @@ You can then run the React dev server
 
 # Add An Action
 
-## Click on `Add` them complete `Task Name` and `Day & Time`. These fields are required!
+## Click on `Add`, then complete `Task Name` and `Day & Time`. These fields are required!
 
 # Mark a task done
 
